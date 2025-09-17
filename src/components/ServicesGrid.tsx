@@ -71,10 +71,10 @@ const ServicesGrid = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <LazyImage
-          src="/website_background_full.jpg"
-          alt="Services background"
+          src="/chrisback.png"
+          alt="Chris, Your Man with a Van background"
           className="w-full h-full object-cover"
-          fallbackSrc="/website_background_full.jpg"
+          fallbackSrc="/chrisback.png"
           loading="eager"
         />
       </div>

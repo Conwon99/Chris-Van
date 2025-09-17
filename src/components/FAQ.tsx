@@ -70,10 +70,10 @@ const FAQ = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <LazyImage
-            src="/website_background_full.jpg"
-            alt="FAQ background"
+            src="/chrisback.png"
+            alt="Chris, Your Man with a Van background"
             className="w-full h-full object-cover"
-            fallbackSrc="/website_background_full.jpg"
+            fallbackSrc="/chrisback.png"
             loading="eager"
           />
         </div>
@@ -116,25 +116,6 @@ const FAQ = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-lg text-white/90 mb-6">
-              Still have questions? We're here to help!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+447735852822"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-black rounded-full font-semibold hover:bg-white/90 transition-colors"
-              >
-                Call 07735 852822
-              </a>
-              <button
-                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition-colors"
-              >
-                Get Free Quote
-              </button>
-            </div>
-          </div>
         </div>
       </section>
     </>
