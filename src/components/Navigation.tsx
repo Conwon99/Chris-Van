@@ -89,8 +89,8 @@ const Navigation = () => {
               onClick={handleQuoteClick}
               className={`px-6 py-2 rounded-full font-semibold transition-colors duration-300 ${
                 isScrolled 
-                  ? 'bg-white hover:bg-white/90 text-black' 
-                  : 'bg-primary-foreground hover:bg-primary-foreground/90 text-primary'
+                  ? 'bg-green-600 hover:bg-green-700 text-white' 
+                  : 'bg-green-600 hover:bg-green-700 text-white'
               }`}
             >
               Free Quote
@@ -146,7 +146,7 @@ const Navigation = () => {
                 </Button>
                 <Button
                   onClick={handleQuoteClick}
-                  className="w-full bg-primary-foreground hover:bg-primary-foreground/90 text-primary"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
                 >
                   Get Free Quote
                 </Button>

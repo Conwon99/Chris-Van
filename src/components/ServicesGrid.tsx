@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Truck, Package, Trash2, ShoppingCart, Home, Scissors } from "lucide-react";
+import { ArrowRight, Truck, Package, Trash2, ShoppingCart, Home, Scissors, Wrench } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 import { trackServiceClick } from "@/utils/analytics";
 
@@ -21,7 +21,7 @@ const ServicesGrid = () => {
       image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       fallbackImage: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       icon: Package,
-      color: "sunshine-yellow"
+      color: "primary-orange"
     },
     {
       title: "Tip Runs & Waste Removal",
@@ -30,7 +30,7 @@ const ServicesGrid = () => {
       image: "https://images.unsplash.com/photo-1581578731548-c6a0c3f2f2c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       fallbackImage: "https://images.unsplash.com/photo-1581578731548-c6a0c3f2f2c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       icon: Trash2,
-      color: "light-orange"
+      color: "primary-orange"
     },
     {
       title: "In-Store Collection & Delivery",
@@ -48,7 +48,16 @@ const ServicesGrid = () => {
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       fallbackImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       icon: Home,
-      color: "sunshine-yellow"
+      color: "primary-orange"
+    },
+    {
+      title: "Flat Pack Assembly",
+      description: "Professional flat pack furniture assembly service",
+      features: ["IKEA furniture", "All major brands", "Tools provided", "Expert assembly"],
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      fallbackImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      icon: Wrench,
+      color: "primary-orange"
     }
   ];
 
@@ -58,8 +67,19 @@ const ServicesGrid = () => {
   };
 
   return (
-    <section id="services" className="py-20 px-4 bg-gradient-to-b from-background to-[hsl(var(--muted))]">
-      <div className="container mx-auto max-w-7xl">
+    <section id="services" className="relative py-20 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <LazyImage
+          src="/website_background_full.jpg"
+          alt="Services background"
+          className="w-full h-full object-cover"
+          fallbackSrc="/website_background_full.jpg"
+          loading="eager"
+        />
+      </div>
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-left mb-16">
           <div className="flex items-center mb-6">
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mr-6">
@@ -74,22 +94,16 @@ const ServicesGrid = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="card-service group">
-              {/* Service Image */}
-              <div className="relative mb-6 rounded-2xl overflow-hidden">
-                <LazyImage
-                  src={service.image}
-                  alt={`Professional ${service.title.toLowerCase()} service in Troon, Ayrshire - expert garden maintenance and tree surgery`}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  fallbackSrc={service.fallbackImage}
-                />
-                <div className={`absolute top-4 left-4 w-12 h-12 bg-[hsl(var(--${service.color}))] rounded-full flex items-center justify-center shadow-lg`}>
-                  <service.icon className="w-6 h-6 text-white" />
+            <div key={index} className="card-service group flex flex-col h-full">
+              {/* Service Icon */}
+              <div className="mb-6 flex justify-center">
+                <div className={`w-20 h-20 bg-[hsl(var(--${service.color}))] rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300`}>
+                  <service.icon className="w-10 h-10 text-white" />
                 </div>
               </div>
 
               {/* Service Content */}
-              <div className="space-y-4">
+              <div className="flex flex-col flex-grow space-y-4">
                 <div>
                   <h3 className="font-display text-2xl font-bold text-white mb-2">
                     {service.title}
@@ -100,7 +114,7 @@ const ServicesGrid = () => {
                 </div>
 
                 {/* Features List */}
-                <ul className="space-y-2">
+                <ul className="space-y-2 flex-grow">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-2 text-sm text-white/90">
                       <div className="w-1.5 h-1.5 bg-[hsl(var(--primary-orange))] rounded-full mt-2 flex-shrink-0" />
@@ -112,7 +126,7 @@ const ServicesGrid = () => {
                 {/* CTA Button */}
                 <Button 
                   onClick={() => handleQuoteClick(service.title)}
-                  className="w-full bg-[hsl(var(--primary-orange))] hover:bg-[hsl(var(--dark-orange))] text-white font-semibold rounded-full group/button"
+                  className="w-full bg-[hsl(var(--primary-orange))] hover:bg-[hsl(var(--dark-orange))] text-white font-semibold rounded-full group/button mt-auto"
                 >
                   Request a Quote
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/button:translate-x-1 transition-transform" />

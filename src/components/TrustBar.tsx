@@ -4,11 +4,11 @@ const TrustBar = () => {
   const trustItems = [
     {
       icon: MapPin,
-      text: "Local"
+      text: "Cumnock & Ayrshire"
     },
     {
       icon: Shield,
-              text: "Fully Qualified Arborist"
+      text: "SEPA Registered"
     },
     {
       icon: Phone,
@@ -16,12 +16,12 @@ const TrustBar = () => {
     },
     {
       icon: Star,
-      text: "5★ Recommended"
+      text: "5★ Service"
     }
   ];
 
   return (
-    <section className="py-8 bg-[hsl(var(--trust-bg))]">
+    <section className="py-8 bg-green-600">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
           {trustItems.map((item, index) => (

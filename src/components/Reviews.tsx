@@ -45,9 +45,6 @@ const Reviews = () => {
 
   return (
     <section id="reviews" className="py-20 px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/t.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
-      
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16">

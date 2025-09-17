@@ -107,8 +107,8 @@ const Hero = () => {
           <div className="text-left space-y-8">
             <div className="space-y-6">
               
-              <h1 className="font-display font-bold text-5xl lg:text-6xl text-white leading-tight drop-shadow-lg">
-                CHRIS, YOUR MAN WITH A VAN
+              <h1 className="font-display font-bold text-4xl lg:text-5xl text-white leading-tight drop-shadow-lg">
+                <span className="text-white italic text-6xl lg:text-7xl">CHRIS</span><span className="text-white">,</span><br />YOUR MAN WITH A VAN
               </h1>
               
               <p className="text-lg text-white/90 font-medium max-w-lg leading-relaxed drop-shadow-md">
@@ -122,7 +122,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/20">
               <Button 
                 onClick={handleCallClick}
-                className="flex items-center gap-3 bg-primary hover:bg-primary/90 text-white rounded-xl px-8 py-5 justify-start text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="flex items-center gap-3 bg-white hover:bg-white/90 text-black rounded-xl px-8 py-5 justify-start text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Phone className="w-6 h-6" />
                 Call: 07735 852822

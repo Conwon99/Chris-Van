@@ -6,37 +6,37 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      src: "",
       alt: "Professional small removal services in Cumnock",
       title: "Small Removals",
       location: "Cumnock"
     },
     {
-      src: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80", 
+      src: "", 
       alt: "Reliable courier and delivery services across Ayrshire",
       title: "Courier Services",
       location: "Ayrshire"
     },
     {
-      src: "https://images.unsplash.com/photo-1581578731548-c6a0c3f2f2c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      src: "",
       alt: "SEPA registered waste removal and tip run services",
       title: "Waste Removal", 
       location: "Ayrshire"
     },
     {
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      src: "",
       alt: "Professional flat-pack furniture assembly service",
       title: "Flat-Pack Assembly",
       location: "Cumnock"
     },
     {
-      src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      src: "",
       alt: "Collection from stores and delivery to your door",
       title: "In-Store Collection",
       location: "Ayrshire"
     },
     {
-      src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      src: "",
       alt: "Complete property clearance for tenants and landlords",
       title: "End-of-Tenancy Clearance",
       location: "Ayrshire"
@@ -66,11 +66,14 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl lg:text-5xl text-foreground mb-4">
-            Our <span className="text-primary">Work</span> Gallery
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-left mb-16">
+          <div className="flex items-center mb-6">
+            <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mr-6">
+              OUR WORK GALLERY
+            </h2>
+            <div className="flex-1 h-px bg-white"></div>
+          </div>
+          <p className="text-xl text-white/90 max-w-3xl">
             Take a look at some of our recent van service projects across Cumnock and Ayrshire
           </p>
         </div>
@@ -83,11 +86,9 @@ const Gallery = () => {
               onClick={() => openLightbox(index)}
             >
               <div className="relative">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                <div className="w-full h-64 bg-gray-800 flex items-center justify-center">
+                  <span className="text-gray-400 text-lg font-medium">No Image Available</span>
+                </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="font-semibold text-lg">{image.title}</h3>

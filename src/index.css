@@ -10,10 +10,10 @@ All colors MUST be HSL.
   :root {
     /* Core brand colors - Orange & Yellow Theme */
     --sunshine-yellow: 51 85% 60%;      /* Softer yellow */
-    --bright-orange: 25 85% 60%;        /* Softer orange */
-    --primary-orange: 30 85% 65%;       /* Muted primary orange */
-    --dark-orange: 20 85% 50%;          /* Softer dark orange */
-    --light-orange: 35 85% 70%;         /* Muted light orange */
+    --bright-orange: 19 67% 49%;        /* #cf5e27 */
+    --primary-orange: 19 67% 49%;       /* #cf5e27 */
+    --dark-orange: 19 67% 39%;          /* Darker version of #cf5e27 */
+    --light-orange: 19 67% 59%;         /* Lighter version of #cf5e27 */
     --asphalt-grey: 0 0% 18%;           /* #2F2F2F */
     
     /* Semantic tokens - Dark Theme */
