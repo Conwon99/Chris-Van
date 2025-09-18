@@ -48,7 +48,7 @@ const Navigation = () => {
               <LazyImage
                 src="/Van logo edit.png"
                 alt="Chris, Your Man with a Van logo"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain brightness-0 invert"
                 fallbackSrc="/Van logo edit.png"
               />
             </div>

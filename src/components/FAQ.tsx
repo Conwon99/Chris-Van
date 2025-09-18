@@ -14,11 +14,11 @@ const FAQ = () => {
     },
     {
       question: "Do you provide same-day courier services?",
-      answer: "Yes, we offer same-day courier and delivery services across Cumnock, East Kilbride and surrounding Ayrshire areas. Whether it's urgent package delivery, furniture collection, or document transport, we can respond quickly to meet your needs. Message us on WhatsApp for immediate assistance."
+      answer: "Yes, we offer same-day courier and delivery services across Ayrshire and beyond. Courier services are available across Scotland. Whether it's urgent package delivery, furniture collection, or document transport, we can respond quickly to meet your needs. Message us on WhatsApp for immediate assistance."
     },
     {
       question: "What areas do you cover?",
-      answer: "We provide van services across Cumnock, East Kilbride and surrounding Ayrshire areas, including Ayr, Kilmarnock, Irvine, and other parts of South Ayrshire. We also cover some areas of East Ayrshire. Contact us to confirm coverage for your specific location."
+      answer: "We cover all of Ayrshire and beyond. Courier services are available across Scotland. Contact us to confirm coverage for your specific location."
     },
     {
       question: "Are you SEPA registered for waste removal?",
@@ -94,7 +94,7 @@ const FAQ = () => {
               FREQUENTLY ASKED QUESTIONS
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Common questions about our van services, removals, courier services, and waste removal in Cumnock, East Kilbride and Ayrshire
+              Common questions about our van services, removals, courier services, and waste removal across Ayrshire & beyond
             </p>
           </div>
 

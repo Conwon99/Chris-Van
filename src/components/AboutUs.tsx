@@ -26,7 +26,7 @@ const AboutUs = () => {
               <div className="w-16 h-1 bg-primary"></div>
               
               <p className="text-lg text-white/90 leading-relaxed max-w-2xl">
-                Hi, I'm Chris! I'm your local go-to for all things van services in Cumnock, East Kilbride and across Ayrshire. I'm a quality-driven, SEPA registered professional turning your moving and delivery needs into reality—one job at a time. Always happy to help, no job is too small.
+                Hi, I'm Chris! I'm your local go-to for all things van services in Cumnock and across Ayrshire and beyond. I'm a quality-driven, SEPA registered professional turning your moving and delivery needs into reality—one job at a time. Always happy to help, no job is too small.
               </p>
               
               {/* Social Media Icons */}

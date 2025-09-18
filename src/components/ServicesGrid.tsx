@@ -88,7 +88,7 @@ const ServicesGrid = () => {
             <div className="flex-1 h-px bg-white"></div>
           </div>
           <p className="text-xl text-white/90 max-w-3xl">
-            Professional small removals, courier services, tip runs, waste removal, and in-store collection & delivery in Cumnock and across Ayrshire. SEPA registered, 5-star service, all jobs done personally with free quotes via WhatsApp.
+            Professional small removals, courier services, tip runs, waste removal, and in-store collection & delivery across Ayrshire & beyond - courier services across Scotland. SEPA registered, 5-star service, all jobs done personally with free quotes via WhatsApp.
           </p>
         </div>
 

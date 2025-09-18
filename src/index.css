@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Maple Tree & Gardening Services Design System - Simpsons-inspired palette
+/* Chris, Your Man with a Van - Website Design System
+Designed by Connor's Design Solutions - https://connorsdesignsolutions.com/
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Core brand colors - Orange & Yellow Theme */
+    /* Core brand colors - Professional Orange & Yellow Theme */
     --sunshine-yellow: 51 85% 60%;      /* Softer yellow */
     --bright-orange: 19 67% 49%;        /* #cf5e27 */
     --primary-orange: 19 67% 49%;       /* #cf5e27 */

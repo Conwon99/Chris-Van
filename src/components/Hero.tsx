@@ -107,7 +107,7 @@ const Hero = () => {
           loading="eager"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent md:bg-gradient-to-r md:from-black/80 md:via-black/40 md:to-transparent"></div>
       </div>
       
       <div className="container mx-auto max-w-7xl relative z-10 pt-20">
@@ -122,7 +122,20 @@ const Hero = () => {
                   titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >
-                <span className="text-white italic text-6xl lg:text-7xl">CHRIS</span><span className="text-white">,</span><br />YOUR MAN WITH A VAN
+                <div className="relative inline-block">
+                  {/* Arrow SVG - positioned behind text */}
+                  <div className="absolute -top-20 -left-6 -right-42 -bottom-32 md:-left-8 md:-right-40 flex items-center justify-center">
+                    <LazyImage
+                      src="/PNG NOBACK.svg"
+                      alt="Arrow decoration"
+                      className="w-full h-full object-contain"
+                      fallbackSrc="/PNG NOBACK.svg"
+                    />
+                  </div>
+                  <span className="text-blue-600 italic text-6xl lg:text-7xl relative z-10">Chris</span>
+                  <span className="text-blue-600 relative z-10">,</span>
+                </div>
+                <br />YOUR MAN WITH A VAN
               </h1>
               
               <p 
@@ -131,7 +144,7 @@ const Hero = () => {
                   descriptionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               >
-                Professional van services in Cumnock, East Kilbride and surrounding areas. Small removals, courier services, tip runs, waste removal, flat-pack assembly, and in-store collection & delivery. SEPA registered, 5-star service, all jobs done personally. Free quotes via WhatsApp.
+                Professional van services across Ayrshire & beyond - courier services across Scotland. Small removals, courier services, tip runs, waste removal, flat-pack assembly, and in-store collection & delivery. SEPA registered, 5-star service, all jobs done personally. Free quotes via WhatsApp.
               </p>
             </div>
 
