@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useFadeIn } from "@/hooks/use-fade-in";
 import { Phone, MessageSquare, Mail, Clock, MapPin } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 import { trackPhoneCall, trackMessenger, trackQuoteRequest, trackFormInteraction } from "@/utils/analytics";
@@ -17,6 +18,12 @@ const Hero = () => {
     message: ''
   });
   const { toast } = useToast();
+  
+  // Fade-in animations
+  const { elementRef: titleRef, isVisible: titleVisible } = useFadeIn({ delay: 200 });
+  const { elementRef: descriptionRef, isVisible: descriptionVisible } = useFadeIn({ delay: 400 });
+  const { elementRef: buttonsRef, isVisible: buttonsVisible } = useFadeIn({ delay: 600 });
+  const { elementRef: formRef, isVisible: formVisible } = useFadeIn({ delay: 800 });
 
   const serviceOptions = [
     'Small Removals',
@@ -93,33 +100,50 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <LazyImage
-          src="/chrisback.png"
+          src="/back1.jpg"
           alt="Chris, Your Man with a Van background"
           className="w-full h-full object-cover"
-          fallbackSrc="/chrisback.png"
+          fallbackSrc="/back1.jpg"
           loading="eager"
         />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
       </div>
       
       <div className="container mx-auto max-w-7xl relative z-10 pt-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-end">
           {/* Text Content */}
-          <div className="text-left space-y-8">
+          <div className="text-left space-y-8 pb-8">
             <div className="space-y-6">
               
-              <h1 className="font-display font-bold text-4xl lg:text-5xl text-white leading-tight drop-shadow-lg">
+              <h1 
+                ref={titleRef}
+                className={`font-display font-bold text-4xl lg:text-5xl text-white leading-tight drop-shadow-lg transition-all duration-1000 ${
+                  titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
                 <span className="text-white italic text-6xl lg:text-7xl">CHRIS</span><span className="text-white">,</span><br />YOUR MAN WITH A VAN
               </h1>
               
-              <p className="text-lg text-white/90 font-medium max-w-lg leading-relaxed drop-shadow-md">
-                Professional van services in Cumnock and surrounding areas. Small removals, courier services, tip runs, waste removal, flat-pack assembly, and in-store collection & delivery. SEPA registered, 5-star service, all jobs done personally. Free quotes via WhatsApp.
+              <p 
+                ref={descriptionRef}
+                className={`text-lg text-white/90 font-medium max-w-lg leading-relaxed drop-shadow-md transition-all duration-1000 ${
+                  descriptionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                Professional van services in Cumnock, East Kilbride and surrounding areas. Small removals, courier services, tip runs, waste removal, flat-pack assembly, and in-store collection & delivery. SEPA registered, 5-star service, all jobs done personally. Free quotes via WhatsApp.
               </p>
             </div>
 
 
 
             {/* Quick Contact */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/20">
+            <div 
+              ref={buttonsRef}
+              className={`flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/20 transition-all duration-1000 ${
+                buttonsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
               <Button 
                 onClick={handleCallClick}
                 className="flex items-center gap-3 bg-white hover:bg-white/90 text-black rounded-xl px-8 py-5 justify-start text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -138,7 +162,13 @@ const Hero = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="card-service" id="contact-form">
+          <div 
+            ref={formRef}
+            className={`card-service transition-all duration-1000 ${
+              formVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            id="contact-form"
+          >
             <div className="text-center mb-6">
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-white mb-2">
                 GET A FREE QUOTE.

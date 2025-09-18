@@ -8,6 +8,7 @@ const ServiceAreas = () => {
     "Irvine",
     "Troon",
     "Prestwick",
+    "East Kilbride",
     "Auchinleck",
     "Mauchline",
     "Catrine",
@@ -26,6 +27,7 @@ const ServiceAreas = () => {
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl">
             We proudly serve Cumnock and surrounding areas across Ayrshire. 
+            <strong className="text-primary">Courier services are available across Scotland.</strong> 
             Contact us to confirm coverage for your specific location.
           </p>
         </div>
@@ -80,7 +82,8 @@ const ServiceAreas = () => {
               </h4>
               <p className="text-muted-foreground mb-4">
                 We may be able to help with services outside our main coverage area. 
-                Contact us to discuss your specific needs and we'll do our best to accommodate you.
+                <strong className="text-primary">Courier services are available across Scotland</strong> - 
+                contact us to discuss your specific needs and we'll do our best to accommodate you.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a

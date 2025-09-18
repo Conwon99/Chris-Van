@@ -2,17 +2,10 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import LazyImage from "@/components/LazyImage";
+import { useFadeIn, useStaggeredFadeIn } from "@/hooks/use-fade-in";
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
-    );
-  };
 
   const faqs = [
     {
@@ -21,11 +14,11 @@ const FAQ = () => {
     },
     {
       question: "Do you provide same-day courier services?",
-      answer: "Yes, we offer same-day courier and delivery services across Cumnock and surrounding Ayrshire areas. Whether it's urgent package delivery, furniture collection, or document transport, we can respond quickly to meet your needs. Message us on WhatsApp for immediate assistance."
+      answer: "Yes, we offer same-day courier and delivery services across Cumnock, East Kilbride and surrounding Ayrshire areas. Whether it's urgent package delivery, furniture collection, or document transport, we can respond quickly to meet your needs. Message us on WhatsApp for immediate assistance."
     },
     {
       question: "What areas do you cover?",
-      answer: "We provide van services across Cumnock and surrounding Ayrshire areas, including Ayr, Kilmarnock, Irvine, and other parts of South Ayrshire. We also cover some areas of East Ayrshire. Contact us to confirm coverage for your specific location."
+      answer: "We provide van services across Cumnock, East Kilbride and surrounding Ayrshire areas, including Ayr, Kilmarnock, Irvine, and other parts of South Ayrshire. We also cover some areas of East Ayrshire. Contact us to confirm coverage for your specific location."
     },
     {
       question: "Are you SEPA registered for waste removal?",
@@ -44,6 +37,18 @@ const FAQ = () => {
       answer: "Yes, we provide completely free, no-obligation quotes for all our services. You can request a quote by calling 07735 852822, messaging us on WhatsApp, or using our contact form. We'll assess your needs and provide a detailed, transparent quote."
     }
   ];
+
+  // Fade-in animations
+  const { elementRef: headerRef, isVisible: headerVisible } = useFadeIn({ delay: 200 });
+  const { containerRef, visibleItems } = useStaggeredFadeIn(faqs.length, 100);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(item => item !== index)
+        : [...prev, index]
+    );
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -79,18 +84,31 @@ const FAQ = () => {
         </div>
         
         <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="text-center mb-16">
+          <div 
+            ref={headerRef}
+            className={`text-center mb-16 transition-all duration-1000 ${
+              headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mb-6">
               FREQUENTLY ASKED QUESTIONS
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Common questions about our van services, removals, courier services, and waste removal in Cumnock and Ayrshire
+              Common questions about our van services, removals, courier services, and waste removal in Cumnock, East Kilbride and Ayrshire
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div 
+            ref={containerRef}
+            className="space-y-4"
+          >
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <div 
+                key={index} 
+                className={`bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden transition-all duration-1000 ${
+                  visibleItems[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
                 <button
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
