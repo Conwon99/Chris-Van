@@ -37,18 +37,14 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" className="py-20 px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/t.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section id="reviews" className="py-20 px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/vanimg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16">
           <div className="mb-8 lg:mb-0">
-            {/* Dark banner */}
-            <div className="bg-[hsl(var(--asphalt-grey))] text-white px-6 py-3 rounded-lg mb-4 inline-block">
-              <p className="font-semibold text-sm">DISCOVER WHAT OUR CUSTOMERS HAVE TO SAY ABOUT US</p>
-            </div>
             
             {/* Main title */}
-            <h2 className="font-display font-bold text-6xl lg:text-7xl text-white mb-4">
+            <h2 className="font-display font-bold text-6xl lg:text-7xl text-black mb-4">
               REVIEWS
             </h2>
           </div>

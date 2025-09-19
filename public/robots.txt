@@ -1,5 +1,5 @@
-# Robots.txt for Maple Tree & Gardens
-# https://mapletreeandgardens.netlify.app/
+# Robots.txt for Chris, Your Man with a Van
+# https://chrisyourmanwithavan.netlify.app/
 
 User-agent: *
 Allow: /
@@ -31,7 +31,7 @@ User-agent: LinkedInBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://mapletreeandgardens.netlify.app/sitemap.xml
+Sitemap: https://chrisyourmanwithavan.netlify.app/sitemap.xml
 
 # Crawl delay (optional - helps with server load)
 Crawl-delay: 1

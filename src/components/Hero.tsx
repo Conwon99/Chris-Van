@@ -33,7 +33,7 @@ const Hero = () => {
     'In-Store Collection & Delivery',
     'Garage & Shed Clearances',
     'End-of-Tenancy Clearance',
-    'Garden Waste Removal'
+    'General Waste Removal'
   ];
 
 
@@ -102,7 +102,7 @@ const Hero = () => {
         <LazyImage
           src="/back1.jpg"
           alt="Chris, Your Man with a Van background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[40%_center] md:object-center"
           fallbackSrc="/back1.jpg"
           loading="eager"
         />

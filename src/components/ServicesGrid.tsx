@@ -73,7 +73,7 @@ const ServicesGrid = () => {
         <LazyImage
           src="/chrisback.png"
           alt="Chris, Your Man with a Van background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
           fallbackSrc="/chrisback.png"
           loading="eager"
         />

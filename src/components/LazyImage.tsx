@@ -6,6 +6,7 @@ interface LazyImageProps {
   className?: string;
   fallbackSrc?: string;
   loading?: 'lazy' | 'eager';
+  style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -16,6 +17,7 @@ const LazyImage = ({
   className = '', 
   fallbackSrc,
   loading = 'lazy',
+  style,
   onLoad,
   onError 
 }: LazyImageProps) => {
@@ -82,6 +84,7 @@ const LazyImage = ({
             className={`transition-opacity duration-300 ${
               isLoaded ? 'opacity-100' : 'opacity-0'
             } ${className}`}
+            style={style}
             loading={loading}
             onLoad={handleLoad}
             onError={handleError}

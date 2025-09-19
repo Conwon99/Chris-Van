@@ -26,7 +26,7 @@ const FAQ = () => {
     },
     {
       question: "What types of waste do you collect?",
-      answer: "We collect various types of waste including bin bags, garage clearances, shed clearances, end-of-tenancy clearances, old fence removal, and garden waste. We're SEPA registered so all waste is disposed of legally. Contact us to discuss your specific waste removal needs."
+      answer: "We collect various types of waste including bin bags, garage clearances, shed clearances, end-of-tenancy clearances, old fence removal, and general waste. We're SEPA registered so all waste is disposed of legally. Contact us to discuss your specific waste removal needs."
     },
     {
       question: "Do you provide in-store collection and delivery?",
@@ -77,7 +77,7 @@ const FAQ = () => {
           <LazyImage
             src="/chrisback.png"
             alt="Chris, Your Man with a Van background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             fallbackSrc="/chrisback.png"
             loading="eager"
           />

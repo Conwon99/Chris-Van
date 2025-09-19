@@ -26,9 +26,7 @@ const ServiceAreas = () => {
             <div className="flex-1 h-px bg-[hsl(var(--asphalt-grey))]"></div>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            We proudly serve Cumnock and surrounding areas across Ayrshire. 
-            <strong className="text-primary">Courier services are available across Scotland.</strong> 
-            Contact us to confirm coverage for your specific location.
+            We proudly serve Cumnock and surrounding areas across Ayrshire. <strong className="text-primary">Courier services are available across Scotland.</strong> Contact us to confirm coverage for your specific location.
           </p>
         </div>
 
@@ -81,9 +79,7 @@ const ServiceAreas = () => {
                 Need Service Outside These Areas?
               </h4>
               <p className="text-muted-foreground mb-4">
-                We may be able to help with services outside our main coverage area. 
-                <strong className="text-primary">Courier services are available across Scotland</strong> - 
-                contact us to discuss your specific needs and we'll do our best to accommodate you.
+                We may be able to help with services outside our main coverage area. <strong className="text-primary">Courier services are available across Scotland</strong> - contact us to discuss your specific needs and we'll do our best to accommodate you.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
@@ -98,7 +94,7 @@ const ServiceAreas = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white transition-colors"
                 >
-                  WhatsApp Us
+                  WhatsApp Me
                 </a>
               </div>
             </div>
